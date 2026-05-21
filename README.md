@@ -48,7 +48,7 @@ When doing the tutorial for the firmware and software go in-depth by breaking do
 3. Power the ESP32 via USB and check all corresponding LED functionalities.
 
 
-![Fully Connected ESP32 and Sensor](images/ESP-32.png)
+![Fully Connected ESP32 and Sensor](ESP-32.png)
 
 
 ---
