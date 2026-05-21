@@ -55,20 +55,10 @@ When doing the tutorial for the firmware and software go in-depth by breaking do
 
 ## Firmware (Hardware Code) 
 
-Example Arduino-style code:
+Arduino code:
 
 ```cpp
-#include <Wire.h>
 
-void setup() {
-  Serial.begin(115200);
-  Wire.begin();
-}
-
-void loop() {
-  Serial.println("Reading sensor...");
-  delay(1000);
-}
 ```
 ---
 
