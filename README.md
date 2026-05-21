@@ -7,6 +7,9 @@
 ## Brainstorm ideas / Overview
 This tutorial will go in-depth about the higher-level functions required to reduce noise and provide accurate--parked car readings for our smart-parking sensor based system. We will be coding in python and using python libraries in conjunction with arduino for communication. In this tutorial we will cover the main objective, the supplies required, hardware setups, and the firmware required to complete this. 
 
+Brainstormed ideas: 
+When doing the tutorial for the firmware and software go in-depth by breaking down the code into smaller sections to explain all of the minor details and what each function does. 
+
 
 
 ---
@@ -43,7 +46,7 @@ This tutorial will go in-depth about the higher-level functions required to redu
 
 2. Ensure all connections are secure.
 
-3. Power the ESP32 via USB.
+3. Power the ESP32 via USB and check all corresponding LED functionalities.
 
 ---
 
@@ -64,6 +67,9 @@ void loop() {
   delay(1000);
 }
 ```
+---
 
-## Software 
+## Software (Python Code) 
+
+
 
