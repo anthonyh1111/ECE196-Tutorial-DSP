@@ -1,45 +1,45 @@
-# Smart Parking Sensor System Tutorial
+# Processing Sensor Data Tutorial
 
 **Anthony Huynh — ECE 196 SP26**
 
 ---
 
-## 🧠 Brainstorm / Overview
+## Brainstorm ideas / Overview
 This tutorial will go in-depth about the higher-level functions required to reduce noise and provide accurate--parked car readings for our smart-parking sensor based system. We will be coding in python and using python libraries in conjunction with arduino for communication. In this tutorial we will cover the main objective, the supplies required, hardware setups, and the firmware required to complete this. 
 
 
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Understand how to interface sensors with an ESP32  
-- Learn how to collect and process sensor data  
+- Learn how to collect and process sensor data   
 - Build a simple occupancy detection system  
-- Transmit data to a user interface or dashboard  
+- Detailed look into filtering sensor data with python. 
 
 ---
 
-## 🧰 Supplies
+## Supplies
 
 - ESP32 Development Board  
 - Distance Sensor (VL53L0X or VL53L1X)  
-- Jumper Wires  
-- Breadboard  
 - USB Cable  
-- Optional: Load Cell + Amplifier  
+- Model Car 
 
-> **Note:** You can substitute sensors depending on availability.
+> **Note:** You can size the model down based on product availability. 
 
 ---
 
-## 🔌 Hardware Setup
+## Hardware Setup
 
 1. Connect the sensor to the ESP32:
    - VCC → 3.3V  
    - GND → GND  
-   - SDA → GPIO 21  
-   - SCL → GPIO 22  
+   - SDA → GPIO 26 (Choose a GPIO Data Pin) 
+   - SCL → GPIO 21 (Choose a GPIO Data Pin)
+  
+   (Photo of ESP32 Devboard) 
 
 2. Ensure all connections are secure.
 
@@ -47,7 +47,7 @@ This tutorial will go in-depth about the higher-level functions required to redu
 
 ---
 
-## 💻 Firmware
+## Firmware (Hardware Code) 
 
 Example Arduino-style code:
 
@@ -63,3 +63,7 @@ void loop() {
   Serial.println("Reading sensor...");
   delay(1000);
 }
+```
+
+## Software 
+
