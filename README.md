@@ -41,12 +41,15 @@ When doing the tutorial for the firmware and software go in-depth by breaking do
    - GND → GND  
    - SDA → GPIO 26 (Choose a GPIO Data Pin) 
    - SCL → GPIO 21 (Choose a GPIO Data Pin)
-  
-   (Photo of ESP32 Devboard) 
+
 
 2. Ensure all connections are secure.
 
 3. Power the ESP32 via USB and check all corresponding LED functionalities.
+
+
+![Fully Connected ESP32 and Sensor](ECE196-Tutorial-DSP/images/ESP-32.HEIC)
+
 
 ---
 
