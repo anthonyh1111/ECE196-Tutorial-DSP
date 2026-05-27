@@ -13,7 +13,7 @@ Install:
     pip install pyserial
 
 Run:
-    python parking_detector.py --port /dev/cu.usbserial-0001
+    python parking_detector.py --port /dev/cu.usbmodem101
 
 On Windows, your port may look like:
     COM3
@@ -225,6 +225,7 @@ def main():
         while True:
             raw_bytes = ser.readline()
             line = raw_bytes.decode(errors="ignore")
+            print("DEBUG LINE:", repr(line))
             raw_distance = parse_serial_line(line)
 
             if raw_distance is None:
