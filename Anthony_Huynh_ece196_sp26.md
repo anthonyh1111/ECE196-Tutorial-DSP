@@ -126,7 +126,7 @@ The full system can be viewed as a signal processing pipeline.
 
 ```mermaid
 flowchart LR
-    A [VL53L1X Distance Sensor] --> B [ESP32 Dev Board]
+    A[VL53L1X Distance Sensor] --> B[ESP32 Dev Board]
     B --> C[USB Serial]
     C --> D[Python Program]
     D --> E[Filter Sensor Data]
@@ -179,7 +179,7 @@ Connect the sensor as shown below.
 Add a wiring photo here: 
 
 ```md
-![ESP32 and VL53L1X wiring](Images/FullModel.jpg)
+![ESP32 and VL53L1X wiring](./Images/FullModel.jpg)
 ```
 
 > **Description to add:** Mention how you physically mounted the sensor in your model parking garage.
