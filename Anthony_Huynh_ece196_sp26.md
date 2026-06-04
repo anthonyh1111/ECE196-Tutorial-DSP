@@ -181,7 +181,7 @@ Connect the sensor as shown below.
 ![ESP32 and VL53L1X wiring](Images/ESP-32.png)
 
 
-> **Description to add:** Mention how you physically mounted the sensor in your model parking garage.
+> **Description:** Mention how you physically mounted the sensor in your model parking garage.
 
 ---
 
