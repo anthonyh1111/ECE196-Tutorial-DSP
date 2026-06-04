@@ -35,15 +35,15 @@ import serial
 class ParkingDetector:
     def __init__(
         self,
-        occupied_threshold_mm=900,
-        empty_threshold_mm=1100,
+        occupied_threshold_mm=300,
+        empty_threshold_mm=250,
         min_valid_mm=40,
         max_valid_mm=4000,
         median_window=5,
         ema_alpha=0.25,
         outlier_jump_mm=500,
-        occupied_confirm_time=2.0,
-        empty_confirm_time=3.0,
+        occupied_confirm_time=1,
+        empty_confirm_time=1,
     ):
         """
         occupied_threshold_mm:
@@ -203,8 +203,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", required=True, help="Serial port, example: COM3 or /dev/cu.usbserial-0001")
     parser.add_argument("--baud", type=int, default=115200)
-    parser.add_argument("--occupied-threshold", type=int, default=900, help="Distance below this means possible car")
-    parser.add_argument("--empty-threshold", type=int, default=1100, help="Distance above this means likely empty")
+    parser.add_argument("--occupied-threshold", type=int, default=260, help="Distance below this means possible car")
+    parser.add_argument("--empty-threshold", type=int, default=280, help="Distance above this means likely empty")
     args = parser.parse_args()
 
     detector = ParkingDetector(
