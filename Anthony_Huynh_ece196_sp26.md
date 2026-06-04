@@ -13,10 +13,10 @@ This tutorial breaks down the logic behind signal processing to build a simple s
 ## Project Photo Placeholder
 
 ```md
-![Completed smart parking model](Images/completed-smart-parking-model.png)
+![Completed smart parking model](Images/FullModel.jpg)
 ```
 
-> **Description to add:** Briefly explain what is shown in the photo. Mention where the ESP32, sensor, parking spot, and model car are located.
+> **Description to add:** Sensor and ESP32 are located at the top. 
 
 ---
 
@@ -45,12 +45,6 @@ This Mini Project #3 tutorial focuses on one important part of the final project
 
 ```md
 [Final Project Website](https://ece196-site.vercel.app/)
-```
-
-Add a photo from your final project here:
-
-```md
-![Final project parking garage model](Images/final-project-garage.png)
 ```
 
 ---
@@ -185,7 +179,7 @@ Connect the sensor as shown below.
 Add a wiring photo here: 
 
 ```md
-![ESP32 and VL53L1X wiring](Images/esp32-vl53l1x-wiring.png)
+![ESP32 and VL53L1X wiring](Images/FullModel.jpg)
 ```
 
 > **Description to add:** Mention how you physically mounted the sensor in your model parking garage.
@@ -257,7 +251,7 @@ void loop() {
     int distance = vl53.distance();
 
     if (distance == -1) {
-      Serial.println("ERR");
+      Serial.println("ERROR INVALID READING");
     } else {
       Serial.println(distance);
     }
@@ -269,9 +263,9 @@ void loop() {
 }
 ```
 
-This section repeatedly checks whether a new distance reading is ready. If the reading is valid, it prints only the number. If the reading fails, it prints `ERR`.
+This section repeatedly checks whether a new distance reading is ready. If the reading is valid, it prints only the number. If the reading fails, it prints `ERROR INVALID READING`.
 
-Printing only the number is important because it makes the Python code easier to write.
+Printing only the number is important because it makes the Python code easier to write and allows simple communication.
 
 ### 7.6 Full Arduino Code
 
@@ -341,13 +335,7 @@ Expected output:
 314
 ```
 
-Add a screenshot of your Serial Monitor here:
-
-```md
-![Arduino Serial Monitor distance readings](Images/serial-monitor-readings.png)
-```
-
-> **Description to add:** Explain what distance values you saw when the parking spot was empty and when a model car was present.
+> **Description to add:** After the filtered reading and time-of-flight sensor projected onto the bottom of our model we got a distance value of around 234 for occupied and 240 for unoccupied. 
 
 ---
 
@@ -488,10 +476,10 @@ This makes the output less sensitive to one bad reading.
 Add a picture or graph of raw vs filtered readings here:
 
 ```md
-![Raw vs filtered sensor readings](Images/raw-vs-filtered-readings.png)
+![Raw vs filtered sensor readings](Images/filteredcomparison.png)
 ```
 
-> **Description to add:** Explain whether filtering made the output more stable in your test.
+> **Description to add:** By filtering, you can see noisy data become a steady curve. 
 
 ---
 
@@ -693,11 +681,6 @@ Run the sensor with no car in the spot.
 Empty spot distance: ______ mm
 ```
 
-Add a photo here:
-
-```md
-![Sensor reading with empty spot](Images/empty-spot-test.png)
-```
 
 ### Test 2: Occupied Parking Spot
 
@@ -705,12 +688,6 @@ Place the model car in the spot.
 
 ```text
 Occupied spot distance: ______ mm
-```
-
-Add a photo here:
-
-```md
-![Sensor reading with occupied spot](Images/occupied-spot-test.png)
 ```
 
 ### Threshold Selection
@@ -750,14 +727,6 @@ When the model car is placed in the spot, the output should eventually say:
 State: OCCUPIED
 ```
 
-Add a screenshot of your working terminal output here:
-
-```md
-![Python terminal showing EMPTY and OCCUPIED states](Images/python-terminal-output.png)
-```
-
-> **Description to add:** Mention whether the detector switched states correctly when you added or removed the model car.
-
 ---
 
 ## 21. Troubleshooting
@@ -782,18 +751,12 @@ Add a screenshot of your working terminal output here:
 - Python `pyserial` documentation.
 - ESP32 I2C pinout references.
 
-Add any specific links you used here:
-
-```md
-- [Resource title](https://example.com)
-- [Resource title](https://example.com)
-```
 
 ---
 
 ## 23. AI-Use Disclosure
 
-AI was used to help organize this tutorial into clearer sections, improve wording, simplify the Python code explanation, and create step-by-step instructions. AI also helped explain how the filtering and threshold logic connects to ECE 101 concepts such as discrete-time signals, smoothing, and noise reduction. The project idea, sensor setup, final project connection, physical testing, calibration values, photos, and final implementation should be verified and completed by the student.
+AI was used to help organize this tutorial into clearer sections, generate digestible images, improve wording, simplify the Python code explanation, and create step-by-step instructions. AI also helped explain how the filtering and threshold logic connects to ECE 101 concepts such as discrete-time signals, smoothing, and noise reduction. The project idea, sensor setup, final project connection, physical testing, calibration values, photos, and final implementation should be verified and completed by the student.
 
 ---
 
@@ -804,25 +767,4 @@ This tutorial showed how to use an ESP32 and VL53L1X distance sensor to collect 
 The key idea is that sensor readings are not always perfect. By treating the readings as a discrete-time signal, applying filtering, and using threshold logic with hysteresis, the detector becomes much more stable. This makes the tutorial useful for the final smart parking project because reliable sensor processing is necessary before building a larger parking availability system.
 
 ---
-
-## 25. Requirement Checklist Before Submitting
-
-Use this checklist before submitting the tutorial.
-
-| Requirement | Included? | Where it appears |
-|---|---:|---|
-| Specific and clear title | Yes | Top of document |
-| Abstract, 3 to 5 sentences | Yes | Abstract section |
-| Intro concept/theory | Yes | Course Concept / Theory Connection |
-| Course concept from a specific course | Yes | ECE 101 |
-| Uses ESP32 Dev board | Yes | Hardware and Firmware sections |
-| Advances technical knowledge using software/hardware | Yes | Sensor processing with Python and ESP32 |
-| Step-by-step build/program/test instructions | Yes | Hardware, Firmware, Testing, Python sections |
-| Final project connection | Yes | Connection to Final Project |
-| Photo/link placeholder for final project | Yes | Connection to Final Project |
-| Additional resources | Yes | Additional Resources |
-| AI-use disclosure | Yes | AI-Use Disclosure |
-| Visual aids | Yes | Mermaid diagrams and image placeholders |
-| Markdown format | Yes | Entire file |
-| Areas to add project/sensor photos | Yes | Multiple image placeholders |
 
