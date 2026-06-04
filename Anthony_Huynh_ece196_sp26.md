@@ -10,11 +10,11 @@ This tutorial breaks down the logic behind signal processing to build a simple s
 
 ---
 
-## Project Photo Placeholder
+## Project Photo 
 
-```md
+
 ![Completed smart parking model](Images/FullModel.jpg)
-```
+
 
 > **Description to add:** Sensor and ESP32 are located at the top. 
 
@@ -176,11 +176,10 @@ Connect the sensor as shown below.
 5. Plug the ESP32 into your computer using a USB cable.
 6. Make sure the sensor is firmly mounted so it does not move during testing.
 
-Add a wiring photo here: 
 
-```md
-![ESP32 and VL53L1X wiring](./Images/FullModel.jpg)
-```
+
+![ESP32 and VL53L1X wiring](Images/ESP-32.png)
+
 
 > **Description to add:** Mention how you physically mounted the sensor in your model parking garage.
 
@@ -335,7 +334,7 @@ Expected output:
 314
 ```
 
-> **Description to add:** After the filtered reading and time-of-flight sensor projected onto the bottom of our model we got a distance value of around 234 for occupied and 240 for unoccupied. 
+> **Description** After the filtered reading and time-of-flight sensor projected onto the bottom of our model we got a distance value of around 234 for occupied and 240 for unoccupied. 
 
 ---
 
@@ -473,11 +472,9 @@ This function does two things:
 
 This makes the output less sensitive to one bad reading.
 
-Add a picture or graph of raw vs filtered readings here:
 
-```md
 ![Raw vs filtered sensor readings](Images/filteredcomparison.png)
-```
+
 
 > **Description to add:** By filtering, you can see noisy data become a steady curve. 
 
